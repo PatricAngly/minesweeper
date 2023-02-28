@@ -1,0 +1,78 @@
+#root {
+  margin-top: 150px;
+}
+
+.gameBoard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #000;
+  margin: 15px auto;
+}
+
+.cell {
+  width: 20%;
+  height: 20%;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.gameStatus {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.content {
+  margin-top: 25%;
+}
+
+.reloadBtn {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.reloadBtn:hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(2);
+  }
+  50% {
+    transform: scale(5);
+  }
+  70% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.explode {
+  animation-name: explode;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
